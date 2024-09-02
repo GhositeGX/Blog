@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h2>Daily</h2>
+            <ul>
+                <li><a href="#" onclick="showTab('profile')">Profile</a></li>
+                <li><a href="#" onclick="showTab('posts')">Posts</a></li>
+                <li><a href="#" onclick="showTab('chats')">Chats</a></li>
+                <li><a href="#" onclick="showTab('files')">Files</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="tabs">
+                <button onclick="showTab('profile')">Profile</button>
+                <button onclick="showTab('posts')">Posts</button>
+                <button onclick="showTab('chats')">Chats</button>
+                <button onclick="showTab('files')">Files</button>
+            </div>
+
+            <div id="profile" class="tab-content">
+                <h2>Profile</h2>
+                <div id="createProfile" class="profile-section">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" placeholder="Enter a short bio"></textarea>
+                    
+                    <label for="contact">Contact:</label>
+                    <input type="text" id="contact" placeholder="Enter contact info">
+                    
+                    <button onclick="updateProfile()">Create Profile</button>
+                </div>
+                <div id="profileDisplay" class="profile-display" style="display:none;">
+                    <!-- Profile cards will be dynamically added here -->
+                </div>
+            </div>
+            
+            
+
+            <div id="posts" class="tab-content">
+                <div class="post-form">
+                    <textarea id="newPost" placeholder="What's on your mind?"></textarea>
+                    <button onclick="addPost()">Post</button>
+                </div>
+                <div id="postsContainer" class="posts">
+                    <!-- Posts will be dynamically added here -->
+                </div>
+            </div>
+
+            <div id="chats" class="tab-content">
+                <h2>Chats</h2>
+                <div id="privateChats">
+                    <!-- Private chat windows will be dynamically added here -->
+                </div>
+            </div>
+
+            <div id="files" class="tab-content">
+                <h2>Files</h2>
+                <input type="file" id="fileInput" multiple />
+                <button onclick="uploadFiles()">Upload Files</button>
+                <div id="filesContainer"></div>
+            </div>
+        </div>
+
+        <div id="friendsList" class="friends">
+            <h2>Friends</h2>
+            <ul>
+                <li><a href="#" onclick="startChat('John Doe')">John Doe</a></li>
+                <li><a href="#" onclick="startChat('Jane Smith')">Jane Smith</a></li>
+                <li><a href="#" onclick="startChat('Bob Johnson')">Bob Johnson</a></li>
+                <li><a href="#" onclick="startChat('Alice Brown')">Alice Brown</a></li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
