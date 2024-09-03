@@ -1,0 +1,331 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.menu {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100%;
+}
+
+.menu h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Content Section */
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.tabs button {
+    margin: 5px;
+    padding: 10px;
+    background: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tabs button.active {
+    background: #333;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.profile-section {
+    max-width: 400px; /* Limits the width of the profile form */
+    margin: 0 auto; /* Centers the form on the screen */
+}
+
+.profile-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-section input[type="text"],
+.profile-section textarea {
+    width: 100%; /* Takes up the full width of the parent container */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.profile-section textarea {
+    resize: vertical; /* Allows vertical resizing only */
+    height: 80px; /* Sets a fixed height for the textarea */
+}
+
+.profile-section button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-section button:hover {
+    background-color: #0056b3;
+}
+
+
+.profile-display {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.profile-display p {
+    margin: 5px 0;
+}
+.profile-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.profile-card p {
+    margin: 5px 0;
+}
+
+/* Posts Section */
+.post-form textarea {
+    width: calc(100% - 20px);
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.post-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-form button:hover {
+    background: #222;
+}
+
+.posts {
+    margin-top: 10px;
+}
+
+.post {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.post button {
+    margin-left: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.post button:hover {
+    background-color: #222;
+    color: white;
+}
+
+/* Chats Section */
+.chat-box {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chat-header h3 {
+    margin: 0;
+}
+
+.chat-header button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-header button:hover {
+    background-color: #222;
+}
+
+.messages {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.message {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.messages textarea {
+    width: calc(100% - 20px);
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.messages textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+/* Files Section */
+.files-container {
+    margin-top: 10px;
+}
+
+.file {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background: #fff;
+}
+
+.file button {
+    margin-left: 10px;
+    padding: 5px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file button:hover {
+    background: #222;
+}
+
+/* Friends List */
+.friends {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100%;
+}
+
+.friends h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.friends ul {
+    list-style: none;
+    padding: 0;
+}
+
+.friends ul li {
+    margin: 10px 0;
+}
+
+.friends ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.friends ul li a:hover {
+    background-color: #ddd;
+}
+
+.friends ul li a.active {
+    background-color: #333;
+    color: white;
+}
